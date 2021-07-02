@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
 .title {
   font-size: 4em;
-  margin-top: 30vh;
+  margin-top: 23vh;
   font-family: 'Otomanopee One', sans-serif;
   color:bisque;
 }
@@ -19,6 +19,11 @@
 html{
   background-color: rgb(49, 48, 48);
 }
-.hi{
-  
+.homebuttons{
+  width: 15vw;
+  height:5vh;
+  margin: 1vw;
+  font-size: 1em;
+  color: bisque;
+  background-color:darkgray;
 }
