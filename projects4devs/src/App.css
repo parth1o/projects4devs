@@ -25,5 +25,8 @@ html{
   margin: 1vw;
   font-size: 1em;
   color: bisque;
-  background-color:darkgray;
+  background-color:rgb(107, 91, 91);
+}
+.single{
+  color:goldenrod;
 }
