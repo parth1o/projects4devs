@@ -1,5 +1,6 @@
 import './App.css';
 import { Button } from '@material-ui/core';
+import login from './login'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Button className="homebuttons" variant="contained">Login</Button>
         <Button className="homebuttons" variant="contained">Sign Up</Button>
     </div>
+    {login}
     </html>
   );
 }
