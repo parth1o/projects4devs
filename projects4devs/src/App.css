@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
+.title {
+  font-size: 4em;
+  margin-top: 30vh;
+  font-family: 'Otomanopee One', sans-serif;
+  color:bisque;
+}
+.desc {
+  font-size: 1.5em;
+  color:bisque;
+  font-family: 'Yomogi', cursive;
+}
+.App {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+}
+html{
+  background-color: rgb(49, 48, 48);
+}
