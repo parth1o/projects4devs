@@ -1,32 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap%27');
 .title {
-  font-size: 4em;
-  margin-top: 23vh;
-  font-family: 'Otomanopee One', sans-serif;
-  color:grey;
+  font-size: 6em;
+  margin-top: 22vh;
+  font-family: 'Share Tech Mono', monospace;
+  color:#E0A458;
+}
+.title2 {
+  font-size: 6em;
+  margin-top: 10vh;
+  margin-bottom: 0;
+  font-family: 'Share Tech Mono', monospace;
+  color:#E0A458;
+}
+#email, #password, #firstName, #lastName, #description{
+  font-family: 'Ubuntu', sans-serif;
+  color:#FFDBB5 !important;
+  border-color: #419D78 !important;
+}
+#hi {
+  margin-top: -20% !important;
 }
 .desc {
-  font-size: 1.5em;
-  color:peru;
-  font-family: 'Yomogi', cursive;
+  font-size: 2.5em;
+  color:#FFDBB5;
+  font-family: 'Ubuntu', sans-serif;
 }
 .App, .projectDetail, .profileDetail {
   text-align: center;
   width: 60%;
   margin: auto;
 }
+html {
+  background-color: #2D3047;
+}
 .homebuttons{
   width: 20vw;
-  height:5vh;
-  font-size: 1em;
-  color: bisque;
-  background-color:rgb(107, 91, 91);
-  font-family: 'Yomogi';
+  height:10vh;
+  margin-top: 3vh !important;
+  font-size: 1.5em !important;
+  font-family: 'Ubuntu', sans-serif;
+  border-color: #FFDBB5 !important;
+  color: #FFDBB5 !important;
+  background-color:#419D78 !important;
+}
+a {
+  text-decoration: none;
 }
 .single{
-  color:rgb(107, 91, 91);
+  color:#419D78;;
 }
+
 .dash{
     width: 100% !important;
 }
