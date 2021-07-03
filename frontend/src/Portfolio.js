@@ -5,6 +5,7 @@ import {useRouteProtector} from "./useRouteProtector";
 import HeaderBar from "./headerbar";
 
 function ProfileDisplay({ dataInput = {} }) {
+    const [loading, setLoading] = useState(true);
     const [data, setData] = useState(dataInput);
     const {token} = useToken();
 
@@ -17,9 +18,22 @@ function ProfileDisplay({ dataInput = {} }) {
                     'Authorization': `Bearer ${token}`
                 }
             }).then(res => res.json())
-                .then(data => setData(data));
+                .then(data => {
+                    setData(data);
+                    setLoading(false);
+                });
+        } else {
+            setLoading(false);
         }
     }, []);
+
+    if (loading) {
+        return (
+            <div>
+                <HeaderBar/>
+            </div>
+        );
+    }
 
     return (
         <div>
