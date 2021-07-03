@@ -11,6 +11,7 @@ import { makeStyles, withTheme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Dialog from '@material-ui/core/Dialog';
 import ProjectDisplay from './ProjectDetails';
+import HeaderBar from "./headerbar";
 
 const useStyles = makeStyles((theme) => ({
     icon: {
@@ -41,8 +42,6 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 export default function Album() {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
@@ -68,16 +67,21 @@ export default function Album() {
     console.log(projects);
 
     if (loading) {
-        return <div></div>;
+        return (
+            <HeaderBar/>
+        )
+    ;
     } else {
         return (
-            <React.Fragment>
-                <CssBaseline />
-                <main>
-                    <Container className={classes.cardGrid} maxWidth="md">
-                        {/* End hero unit */}
-                        <Grid container spacing={4}>
-                            {!loading &&
+            <div>
+                <HeaderBar/>
+                <React.Fragment>
+                    <CssBaseline />
+                    <main>
+                        <Container className={classes.cardGrid} maxWidth="md">
+                            {/* End hero unit */}
+                            <Grid container spacing={4}>
+                                {!loading &&
                                 projects.map((card) => (
                                     <Grid
                                         item
@@ -130,6 +134,7 @@ export default function Album() {
                     </Container>
                 </main>
             </React.Fragment>
+            </div>
         );
     }
 }
