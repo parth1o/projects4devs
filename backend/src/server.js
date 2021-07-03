@@ -2,11 +2,15 @@ import express from 'express';
 import session from 'express-session';
 import crypto from 'crypto';
 import path from 'path';
-// import connectToDatabase from './db/db-connect';
+const Mongoose = require('mongoose');
+
+// Setup environment variables
+require('dotenv').config();
 
 // Setup Express
 const app = express();
 const port = process.env.PORT || 3001;
+const mongoURI = process.env.MONGODB_URI || process.env.MONGODB_URI;
 
 // Setup body-parser
 app.use(express.json());
@@ -44,6 +48,12 @@ if (true) {
     });
 }
 
-// // Start the DB running. Then, once it's connected, start the server.
-// connectToDatabase()
-//     .then(() => httpServer.listen(port, () => console.log(`App server listening on port ${port}!`)));
+// Connect to MongoDb and if successful start server
+Mongoose.connect(mongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then(
+    app.listen(port, () => {
+        console.log(`Listening to requests on http://localhost:${port}`);
+    })
+);
