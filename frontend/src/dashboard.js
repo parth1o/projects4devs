@@ -109,6 +109,9 @@ export default function Album() {
                                                 <Button
                                                     size="small"
                                                     color="primary"
+                                                    onClick={() =>
+                                                        setOpen(true)
+                                                    }
                                                 >
                                                     View
                                                 </Button>
