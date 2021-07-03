@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import {useHistory} from 'react-router-dom';
+import useToken from './useToken';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -40,6 +41,8 @@ export default function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const {setToken} = useToken();
+
   const signIn = async () => {
     let res = await fetch('/api/login', {
       method: 'POST',
@@ -53,6 +56,8 @@ export default function SignUp() {
     });
 
     if (res.status === 200) {
+      let data = await res.json();
+      setToken(data.token);
       history.push('/dashboard');
     } else {
       window.alert('Can\'t log in');

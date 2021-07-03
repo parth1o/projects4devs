@@ -40,6 +40,7 @@ export default function SignUp() {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [description, setDescription] = useState('');
 
   const signUp = async () => {
     let res = await fetch('/api/user', {
@@ -51,7 +52,8 @@ export default function SignUp() {
         firstName,
         lastName,
         email,
-        password
+        password,
+        description
       })
     });
 
@@ -139,6 +141,8 @@ export default function SignUp() {
                 label="Decription"
                 name="description"
                 autoComplete=""
+                onChange={event => setDescription(event.target.value)}
+                value={description}
               />
             </Grid>
           </Grid>

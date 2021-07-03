@@ -1,27 +1,32 @@
 import './App.css';
-import Chip from '@material-ui/core/Chip';
-import Button from '@material-ui/core/Button';
+import {useEffect, useState} from 'react';
+import useToken from './useToken';
 
-function ProfileDisplay({ data={} }) {
+function ProfileDisplay({ dataInput = {} }) {
+    const [data, setData] = useState(dataInput);
+    const {token} = useToken();
+
+    useEffect(() => {
+        if (!data.name) {
+            fetch('/api/user', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            }).then(res => res.json())
+                .then(data => setData(data));
+        }
+    }, []);
+
     return (
         <div className="profileDetail">
-            <h1 className="title">{data.name}</h1>
-            <div className="desc">
-                <h4>Skills:</h4>
-            </div>
+            <h1 className="title">{`${data.firstName} ${data.lastName}`}</h1>
 
             <div className="desc">
                 <h4>About me!</h4>
-                <p>
-                    First year Compsci student. Check out my projects and Github
-                </p>
-                <Button className="homebuttons" variant="contained">
-                    Say Hello!
-                </Button>
-                <Button className="homebuttons" variant="contained">
-                    My projects
-                </Button>
+                <p>{data.description}</p>
             </div>
+
+            <p>{data.email}</p>
         </div>
     );
 }

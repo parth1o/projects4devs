@@ -1,5 +1,6 @@
 import express from 'express';
 import * as usersDao from '../../db/users-dao';
+import auth from '../../middleware/auth';
 
 const HTTP_CREATED = 201;
 const HTTP_BAD_REQUEST = 400;
@@ -12,6 +13,15 @@ router.post('/', async (req, res) => {
         res.status(HTTP_CREATED)
             .header('location', `/api/user/${newUser._id}`)
             .json(newUser);
+    } catch {
+        res.sendStatus(HTTP_BAD_REQUEST);
+    }
+});
+
+router.get('/', auth, async (req, res) => {
+    try {
+        let user = await usersDao.retrieveUser(req.body._id)
+        res.json(user);
     } catch {
         res.sendStatus(HTTP_BAD_REQUEST);
     }
