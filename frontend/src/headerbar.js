@@ -1,9 +1,13 @@
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import React from "react";
 import {Button} from "@material-ui/core";
 import "./headerbar.css";
+import useToken from './useToken';
 
-function headerbar(){
+function Headerbar(){
+    const history = useHistory();
+    const {deleteToken} = useToken();
+
     return (
         <nav className="navbar navbar navbar-default navbar-expand-sm">
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -18,11 +22,14 @@ function headerbar(){
                         <Link className="nav-item nav-link" to='/dashboard'>Create Project</Link>
                     </a>
                     <a>
-                        <Link className="nav-item nav-link" to='/'>Log Out</Link>
+                        <a className="nav-item nav-link" onClick={() => {
+                            deleteToken();
+                            history.push('/');
+                        }}>Log Out</a>
                     </a>
                 </div>
             </div>
         </nav>
     )
 }
-export default headerbar;
+export default Headerbar;
