@@ -1,5 +1,6 @@
 import './App.css';
 import { Button } from '@material-ui/core';
+import ProjectDisplay from './Project1';
 
 function App() {
   return (
@@ -17,3 +18,5 @@ function App() {
 }
 
 export default App;
+
+// export default ProjectDisplay;
