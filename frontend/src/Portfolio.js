@@ -39,14 +39,13 @@ function ProfileDisplay({ dataInput = {} }) {
         <div>
             <HeaderBar/>
             <div className="profileDetail">
-                <h1 className="title">{`${data.firstName} ${data.lastName}`}</h1>
-
+                <p className="lol"><strong className="othfont">Name: </strong>{`${data.firstName} ${data.lastName}`}</p>
                 <div className="desc">
-                    <h4>About me!</h4>
-                    <p>{data.description}</p>
+                    <strong><p className="othfont">Your Experiences:</p></strong>
+                    <p className="ghu">{data.description}</p>
                 </div>
 
-                <p>{data.email}</p>
+                <p className="ghuu"><strong className="othfont">Your Email: </strong>{data.email}</p>
             </div>
         </div>
     );

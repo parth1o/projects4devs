@@ -23,20 +23,21 @@ function Headerbar(){
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
                     <a>
-                        <Link className="nav-item nav-link" to='/profile'>Profile</Link>
-                    </a>
-                    <a>
-                        <Link className="nav-item nav-link" to='/dashboard'>Dashboard</Link>
-                    </a>
-                    <a>
-                        <Link className="nav-item nav-link" to='/dashboard' onClick={openModal}>Create Project</Link>
-                    </a>
-                    <a>
                         <a className="nav-item nav-link" onClick={() => {
                             deleteToken();
                             history.push('/');
                         }}>Log Out</a>
                     </a>
+                    <a>
+                        <Link className="nav-item nav-link" to='/profile'>Profile </Link>
+                    </a>
+                    <a>
+                        <Link className="nav-item nav-link" to='/dashboard' onClick={openModal}>Create Project </Link>
+                    </a>
+                    <a>
+                        <Link className="nav-item nav-link" to='/dashboard'>Dashboard</Link>
+                    </a>
+                    <p className="title3">projects<span className="singl">4</span>devs</p>
                 </div>
             </div>
             <Dialog open={open} onClose={closeModal}>
