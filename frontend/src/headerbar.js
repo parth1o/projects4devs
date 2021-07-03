@@ -16,6 +16,7 @@ function Headerbar(){
 
     function closeModal() {
         setOpen(false)
+        history.push('/dashboard');
         window.location.reload();
     }
     return (
@@ -32,7 +33,7 @@ function Headerbar(){
                         <Link className="nav-item nav-link" to='/profile'>Profile </Link>
                     </a>
                     <a>
-                        <Link className="nav-item nav-link" to='/dashboard' onClick={openModal}>Create Project </Link>
+                        <Link className="nav-item nav-link" onClick={openModal}>Create Project </Link>
                     </a>
                     <a>
                         <Link className="nav-item nav-link" to='/dashboard'>Dashboard</Link>

@@ -26,11 +26,14 @@ function ProjectDisplay({ data }) {
     return (
         <div className="projectDetail">
             <p className="top">{data.name}</p>
-            <p>Project Owners Github link:{data.owner}</p>
-            <p>{data.githubLink}</p>
-
-            <div className="desc">
-                <h3>Project Summary:</h3>
+            <p className="ghuu"><strong>Project Owner: </strong>{data.owner.firstName} {data.owner.lastName}</p>
+            <p className="ghuu"><strong>Owner Email: </strong>{data.owner.email}</p>
+            <p className="ghuu"><strong>Project Github link: </strong><a className="ghu" target="_blank" href={data.githubLink}>{data.githubLink}</a></p>
+            
+            <br>
+            </br>
+            <div className="ghuu">
+                <p><strong>Project Summary:</strong></p>
                 <p>{data.description}</p>
             </div>
         </div>
