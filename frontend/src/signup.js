@@ -16,11 +16,10 @@ function signup() {
           placeholder="Write about your software development experiences here"
           variant="outlined"
         />
-      
-      
-      <Button className="homebuttons" variant="contained">Sign Up</Button>
+        <Button className="homebuttons" variant="contained">Sign Up</Button>
     </form>
   );
+
 }
 
 export default signup;
