@@ -12,6 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { useHistory } from 'react-router-dom';
 
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -67,7 +68,7 @@ export default function SignUp() {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <p className="title" component="h1" variant="h5">
+        <p className="title2" component="h1" variant="h5">
           Sign up
         </p>
         <form className={classes.form} noValidate>
@@ -75,7 +76,10 @@ export default function SignUp() {
             <Grid item xs={12} sm={6}>
               <TextField
               InputLabelProps={{
-                style: { color: '#FFDBB5' },
+                style: { 
+                    color: '#FFDBB5'
+                },
+                
               }}
                 autoComplete="fname"
                 name="firstName"
@@ -164,9 +168,6 @@ export default function SignUp() {
           >
             Sign Up
           </Button>
-          <Link to='/login'>
-            Already have an account? Sign in
-          </Link>
         </form>
       </div>
     </Container>
