@@ -6,6 +6,9 @@
   font-family: 'Share Tech Mono', monospace;
   color:#E0A458;
 }
+.popup{
+  background-color: #2D3047;
+}
 .title2 {
   font-size: 6em;
   margin-top: 10vh;
@@ -13,10 +16,50 @@
   font-family: 'Share Tech Mono', monospace;
   color:#E0A458;
 }
-#email, #password, #firstName, #lastName, #description{
+#email, #password, #firstName, #lastName, #description, #newproject, #description, #githublink{
   font-family: 'Ubuntu', sans-serif;
   color:#FFDBB5 !important;
   border-color: #419D78 !important;
+}
+.lol{
+  font-size: 5em;
+  font-family: 'Share Tech Mono', monospace;
+  color:#FFDBB5;
+  margin-top: 10vh 0 !important;
+  width: 100% !important;
+  text-align: center;
+}
+.projectDetail{
+  background-color: #2D3047;
+  margin: 0 !important;
+  width: 100% !important;
+  padding: 2vh 2vw 2vh 2vw !important;
+}
+.othfont{
+  font-family: 'Share Tech Mono', monospace;
+  color:#E0A458 !important;
+}
+.top{
+  font-size: 6em;
+  font-family: 'Share Tech Mono', monospace;
+  color:#E0A458;
+}
+.ghu{
+  font-size: 1em !important;
+  font-family: 'Ubuntu', sans-serif;
+  color:#FFDBB5 !important;
+}
+.ghuu{
+  font-size: 2em !important;
+  font-family: 'Ubuntu', sans-serif;
+  color:#FFDBB5 !important;
+}
+.topp{
+  font-size: 3em;
+  text-align: center;
+  margin: 0 !important;
+  font-family: 'Share Tech Mono', monospace;
+  color:#E0A458;
 }
 #hi {
   margin-top: -20% !important;

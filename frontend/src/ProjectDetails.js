@@ -25,10 +25,12 @@ import Button from '@material-ui/core/Button';
 function ProjectDisplay({ data }) {
     return (
         <div className="projectDetail">
-            <h1 className="title">{data.name}</h1>
+            <p className="top">{data.name}</p>
+            <p>Project Owners Github link:{data.owner}</p>
+            <p>{data.githubLink}</p>
 
             <div className="desc">
-                <h3>Project Summary</h3>
+                <h3>Project Summary:</h3>
                 <p>{data.description}</p>
             </div>
         </div>
