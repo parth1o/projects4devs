@@ -11,7 +11,7 @@
   color:bisque;
   font-family: 'Yomogi', cursive;
 }
-.App, .projectDetail {
+.App, .projectDetail, .profileDetail {
   text-align: center;
   width: 60%;
   margin: auto;
