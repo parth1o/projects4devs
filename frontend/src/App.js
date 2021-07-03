@@ -9,6 +9,7 @@ import Login from './login'
 import Signup from './signup'
 import { Link } from "react-router-dom";
 import Dash from './dashboard'
+import Createproj from './createproject'
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
             </Route>
             <Route exact path="/dashboard">
               <Dash className="dash"/>
+            </Route>
+            <Route exact path="/createproject">
+              <Createproj/>
             </Route>
           </Switch>
     </div>
