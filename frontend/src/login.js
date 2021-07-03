@@ -41,7 +41,7 @@ export default function SignUp() {
   const [password, setPassword] = useState('');
 
   const signIn = async () => {
-    await fetch('/api/login', {
+    let res = await fetch('/api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
