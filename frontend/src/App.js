@@ -1,5 +1,4 @@
 import './App.css';
-import { Button } from '@material-ui/core';
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,39 +6,35 @@ import {
 } from "react-router-dom";
 import Login from './login'
 import Signup from './signup'
-import { Link } from "react-router-dom";
 import Dash from './dashboard'
+import Home from './home'
+import Profile from './profile'
+import HeaderBar from './headerbar';
 
 function App() {
   return (
       <Router>
-        <div>
-          <Switch>
-            <Route exact path='/'>
-              <div className="App">
-                <h1 className="title">projects<span className="single">4</span>devs</h1>
-                <p className="desc">
-                  projects4devs aims to solve the issue student developers have in finding meaningful projects.Students are able to become project owners and put their project ideas onto the site and other students can request to join their project,if the project owner sees the requested students profile and sees them as a goodfit then they will be able approve the student to come in on the project.project4devs helps to add an additional layer of support for student devs as through these projects they will be able to gain valuable experience which will help them to get that dream internship or job.
-                </p>
-                <Link to='/login'>
-                  <Button className="homebuttons" variant="contained">Login</Button>
-                </Link>
-                <Link to='/signup'>
-                  <Button className="homebuttons" variant="contained">Sign Up</Button>
-                </Link>
-              </div>
-            </Route>
-            <Route exact path="/login">
-              <Login/>
-            </Route>
-            <Route exact path="/signup">
-              <Signup/>
-            </Route>
-            <Route exact path="/dashboard">
-              <Dash className="dash"/>
-            </Route>
-          </Switch>
+    <html>
+    <div className="App">
+        <Switch>
+          <Route exact path='/'>
+            <Home/>
+          </Route>
+          <Route exact path="/login">
+            <Login/>
+          </Route>
+          <Route exact path="/signup">
+            <Signup/>
+          </Route>
+          <Route exact path="/dashboard">
+            <Dash/>
+          </Route>
+          <Route exact path="/profile">
+            <Profile/>
+          </Route>
+        </Switch>
         </div>
+    </html>
       </Router>
   );
 }
