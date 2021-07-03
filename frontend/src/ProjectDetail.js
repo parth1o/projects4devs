@@ -1,53 +1,35 @@
 import './App.css';
-//import { makeStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
 import Button from '@material-ui/core/Button';
 
-/*const useStyles = makeStyles((theme) => ({
-    root: {
-      display: 'flex',
-      justifyContent: 'center',
-      flexWrap: 'wrap',
-      '& > *': {
-        margin: theme.spacing(0.5),
-      },
-    },
-  })); */
-
-/*function OutlinedChips() {
-    const classes = useStyles();
-
-    const handleClick = () => {
-      console.info('You clicked the Chip.');
-    };
-}*/
-
-function ProjectDisplay() {
-
+function ProfileDisplay() {
     return (
-
-        <div className="projectDetail">
-            <h1 className="title">Project Name</h1>
+        <div className="profileDetail">
+            <h1 className="title">Test Dummy</h1>
             <div className="desc">
-                <h3>Language and Expertise Requirement</h3>
+                <h4>Skills:</h4>
                 <Chip label="Python" color="primary" />
-                <Chip label="JavaScript" color="secondary"/>
-                <Chip label="CSS" />
-                <br/>
                 <p>Expertise Level: Beginner</p>
+
+                <Chip label="JavaScript" color="secondary"/>
+                <p>Expertise Level: Intermediate</p>
+
+                <Chip label="CSS" />
+                <p>Expertise Level: Intermediate</p>
+
             </div>
 
             <div className="desc">
-                <h3>Project Summary</h3>
+                <h4>About me!</h4>
                 <p>
-                    Summary your project here
+                    First year Compsci student. Check out my projects and Github
                 </p>
-                <Button className="homebuttons" variant="contained">I'm interested!</Button>
-                <Button className="homebuttons" variant="contained">Explore more projects</Button>
+                <Button className="homebuttons" variant="contained">Say Hello!</Button>
+                <Button className="homebuttons" variant="contained">My projects</Button>
             </div>
         </div>
 
     );
 };
 
-export default ProjectDisplay;
+export default ProfileDisplay;
