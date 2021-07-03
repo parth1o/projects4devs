@@ -4,15 +4,19 @@
   "description": "",
   "main": "./src/server.js",
   "scripts": {
-    "start": "node -r esm ./src/server.js"
+    "start": "node -r esm ./src/server.js",
+    "live": "nodemon -r esm ./src/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.6",
-    "mongoose": "^5.12.6"
+    "mongoose": "^5.12.6",
+    "nodemon": "^2.0.9"
   }
 }
