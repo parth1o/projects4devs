@@ -11,7 +11,8 @@ import { makeStyles, withTheme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Dialog from '@material-ui/core/Dialog';
 import ProjectDisplay from './ProjectDetails';
-import HeaderBar from "./headerbar";
+import HeaderBar from './headerbar';
+import {useRouteProtector} from './useRouteProtector';
 
 const useStyles = makeStyles((theme) => ({
     icon: {
@@ -48,6 +49,8 @@ export default function Album() {
     const [projects, setProjects] = useState(null);
     const [loading, setLoading] = useState(true);
     const [viewingItem, setViewingItem] = useState(null);
+
+    useRouteProtector();
 
     useEffect(() => {
         fetch('/api/project', {

@@ -1,10 +1,13 @@
 import './App.css';
 import {useEffect, useState} from 'react';
 import useToken from './useToken';
+import {useRouteProtector} from "./useRouteProtector";
 
 function ProfileDisplay({ dataInput = {} }) {
     const [data, setData] = useState(dataInput);
     const {token} = useToken();
+
+    useRouteProtector();
 
     useEffect(() => {
         if (!data.name) {
