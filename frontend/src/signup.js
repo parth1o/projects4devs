@@ -13,6 +13,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -40,7 +41,7 @@ export default function SignUp() {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <p className="title" component="h1" variant="h5">
+        <p className="title2" component="h1" variant="h5">
           Sign up
         </p>
         <form className={classes.form} noValidate>
@@ -48,7 +49,10 @@ export default function SignUp() {
             <Grid item xs={12} sm={6}>
               <TextField
               InputLabelProps={{
-                style: { color: '#FFDBB5' },
+                style: { 
+                    color: '#FFDBB5'
+                },
+                
               }}
                 autoComplete="fname"
                 name="firstName"
@@ -129,13 +133,6 @@ export default function SignUp() {
           >
             Sign Up
           </Button>
-          <Grid container justify="center">
-            <Grid item>
-              <Link href="#" variant="body2">
-                Already have an account? Sign in
-              </Link>
-            </Grid>
-          </Grid>
         </form>
       </div>
       <Box mt={5}>

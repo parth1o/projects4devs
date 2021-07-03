@@ -6,9 +6,20 @@
   font-family: 'Share Tech Mono', monospace;
   color:#E0A458;
 }
+.title2 {
+  font-size: 6em;
+  margin-top: 10vh;
+  margin-bottom: 0;
+  font-family: 'Share Tech Mono', monospace;
+  color:#E0A458;
+}
 #email, #password, #firstName, #lastName, #description{
   font-family: 'Ubuntu', sans-serif;
   color:#FFDBB5 !important;
+  border-color: #419D78 !important;
+}
+#hi {
+  margin-top: -20% !important;
 }
 .desc {
   font-size: 2.5em;

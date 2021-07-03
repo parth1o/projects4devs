@@ -43,7 +43,7 @@ export default function SignUp() {
       <CssBaseline />
       <div className={classes.paper}>
         
-        <p className="title" component="h1" variant="h5">
+        <p className="title2" component="h1" variant="h5">
           SIGN IN
         </p>
         <form className={classes.form} noValidate>
