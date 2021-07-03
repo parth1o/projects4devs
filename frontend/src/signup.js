@@ -5,7 +5,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -152,18 +151,11 @@ export default function SignUp() {
           >
             Sign Up
           </Button>
-          <Grid container justify="center">
-            <Grid item>
-              <Link href="#" variant="body2">
-                Already have an account? Sign in
-              </Link>
-            </Grid>
-          </Grid>
+          <Link to='/login'>
+            Already have an account? Sign in
+          </Link>
         </form>
       </div>
-      <Box mt={5}>
-        
-      </Box>
     </Container>
   );
 }
