@@ -11,4 +11,7 @@ router.use('/login', login);
 import project from './project';
 router.use('/project', project);
 
+import skill from './skill';
+router.use('/skill', skill);
+
 export default router;
