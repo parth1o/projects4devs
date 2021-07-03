@@ -9,6 +9,7 @@ import Login from './login'
 import Signup from './signup'
 import { Link } from "react-router-dom";
 import Dash from './dashboard'
+import ProjectDisplay from './Project1';
 
 function App() {
   return (

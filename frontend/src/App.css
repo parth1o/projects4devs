@@ -11,17 +11,18 @@
   color:peru;
   font-family: 'Yomogi', cursive;
 }
-.App {
+.App, .projectDetail {
   text-align: center;
   width: 60%;
   margin: auto;
 }
 .homebuttons{
-  width: 15vw;
+  width: 20vw;
   height:5vh;
   font-size: 1em;
   color: bisque;
   background-color:rgb(107, 91, 91);
+  font-family: 'Yomogi';
 }
 .single{
   color:rgb(107, 91, 91);
