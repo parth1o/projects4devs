@@ -9,3 +9,7 @@ export async function createUser(user) {
 export async function retrieveUser(id) {
     return User.findById(id);
 }
+
+export async function retrieveUserByEmail(email) {
+    return User.findOne({email});
+}
