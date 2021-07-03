@@ -1,7 +1,8 @@
 import './App.css';
-import {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import useToken from './useToken';
 import {useRouteProtector} from "./useRouteProtector";
+import HeaderBar from "./headerbar";
 
 function ProfileDisplay({ dataInput = {} }) {
     const [data, setData] = useState(dataInput);
@@ -21,15 +22,18 @@ function ProfileDisplay({ dataInput = {} }) {
     }, []);
 
     return (
-        <div className="profileDetail">
-            <h1 className="title">{`${data.firstName} ${data.lastName}`}</h1>
+        <div>
+            <HeaderBar/>
+            <div className="profileDetail">
+                <h1 className="title">{`${data.firstName} ${data.lastName}`}</h1>
 
-            <div className="desc">
-                <h4>About me!</h4>
-                <p>{data.description}</p>
+                <div className="desc">
+                    <h4>About me!</h4>
+                    <p>{data.description}</p>
+                </div>
+
+                <p>{data.email}</p>
             </div>
-
-            <p>{data.email}</p>
         </div>
     );
 }
