@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -39,16 +40,16 @@ export default function SignUp() {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
+        <p className="title" component="h1" variant="h5">
           Sign up
-        </Typography>
+        </p>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
+              InputLabelProps={{
+                style: { color: '#FFDBB5' },
+              }}
                 autoComplete="fname"
                 name="firstName"
                 variant="outlined"
@@ -61,6 +62,9 @@ export default function SignUp() {
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
+              InputLabelProps={{
+                style: { color: '#FFDBB5' },
+              }}
                 variant="outlined"
                 required
                 fullWidth
@@ -72,6 +76,9 @@ export default function SignUp() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+              InputLabelProps={{
+                style: { color: '#FFDBB5' },
+              }}
                 variant="outlined"
                 required
                 fullWidth
@@ -83,6 +90,9 @@ export default function SignUp() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+              InputLabelProps={{
+                style: { color: '#FFDBB5' },
+              }}
                 variant="outlined"
                 required
                 fullWidth
@@ -95,6 +105,9 @@ export default function SignUp() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+              InputLabelProps={{
+                style: { color: '#FFDBB5' },
+              }}
                 variant="outlined"
                 required
                 fullWidth
@@ -112,7 +125,7 @@ export default function SignUp() {
             fullWidth
             variant="contained"
             color="primary"
-            className={classes.submit}
+            className="homebuttons"
           >
             Sign Up
           </Button>
