@@ -9,7 +9,10 @@ const projectSchema = new Schema({
 	description: { type: String, required: true },
 	numPeople: { type: String, required: true } ,
 	githubLink: { type: String, required: true },
-    language: { type: String, required: true },
+    skill: [{
+        name: String,
+        proficiency: String
+    }],
 
 }, {
     timestamps: {}
