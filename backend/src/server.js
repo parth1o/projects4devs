@@ -36,8 +36,8 @@ app.use('/', routes);
 app.use(express.static(path.join(__dirname, '../public')));
 
 // Serve up the frontend's "build" directory, if we're running in production mode.
-if (true) {
-    console.log('Running in production!');
+if (process.env.NODE_ENV === 'production') {
+    console.log('Running in production!');
 
     // Make all files in that folder public
     app.use(express.static(path.join(__dirname, '../../sss_frontend/build')));
