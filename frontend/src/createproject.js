@@ -9,6 +9,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import useToken from './useToken';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -35,6 +36,7 @@ export default function CreateProject({ close }) {
     const [name, setName] = useState();
     const [description, setDescription] = useState();
     const [githubLink, setGithubLink] = useState();
+    const {token} = useToken();
 
     function changeName(e) {
         setName(e.target.value);
@@ -56,6 +58,7 @@ export default function CreateProject({ close }) {
         await fetch('/api/project', {
             method: 'POST',
             headers: {
+                'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
