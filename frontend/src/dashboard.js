@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, withTheme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Dialog from '@material-ui/core/Dialog';
-import ProjectDisplay from './ProjectDetail';
+import ProjectDisplay from './ProjectDetails';
 
 const useStyles = makeStyles((theme) => ({
     icon: {
@@ -48,6 +48,7 @@ export default function Album() {
     const [open, setOpen] = useState(false);
     const [projects, setProjects] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [viewingItem, setViewingItem] = useState(null);
 
     useEffect(() => {
         fetch('/api/project', {
@@ -63,6 +64,8 @@ export default function Album() {
             });
         setLoading(true);
     }, []);
+
+    console.log(projects);
 
     if (loading) {
         return <div></div>;
@@ -109,9 +112,10 @@ export default function Album() {
                                                 <Button
                                                     size="small"
                                                     color="primary"
-                                                    onClick={() =>
-                                                        setOpen(true)
-                                                    }
+                                                    onClick={() => {
+                                                        setViewingItem(card);
+                                                        setOpen(true);
+                                                    }}
                                                 >
                                                     View
                                                 </Button>
@@ -121,7 +125,7 @@ export default function Album() {
                                 ))}
                         </Grid>
                         <Dialog open={open} onClose={() => setOpen(false)}>
-                            <ProjectDisplay />
+                            <ProjectDisplay data={viewingItem} />
                         </Dialog>
                     </Container>
                 </main>
