@@ -1,0 +1,13 @@
+{
+	"name": "root",
+	"version": "1.0.0",
+	"description": "",
+	"main": "main.js",
+	"scripts": {
+		"start": "cd backend && npm start",
+		"build": "cd frontend && npm i && npm run build && cp -R build ../backend && cd ../backend && npm i && cd .."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}
