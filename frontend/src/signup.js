@@ -129,6 +129,19 @@ export default function SignUp() {
                 value={password}
               />
             </Grid>
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                multiline
+                id="description"
+                placeholder="Write about your software devlopment experiences in here"
+                label="Decription"
+                name="description"
+                autoComplete=""
+              />
+            </Grid>
           </Grid>
           <Button
             fullWidth

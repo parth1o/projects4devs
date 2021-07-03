@@ -4,20 +4,17 @@
   font-size: 4em;
   margin-top: 23vh;
   font-family: 'Otomanopee One', sans-serif;
-  color:bisque;
+  color:grey;
 }
 .desc {
   font-size: 1.5em;
-  color:bisque;
+  color:peru;
   font-family: 'Yomogi', cursive;
 }
 .App {
   text-align: center;
   width: 60%;
   margin: auto;
-}
-html{
-  background-color: rgb(49, 48, 48);
 }
 .homebuttons{
   width: 15vw;
@@ -27,5 +24,8 @@ html{
   background-color:rgb(107, 91, 91);
 }
 .single{
-  color:goldenrod;
+  color:rgb(107, 91, 91);
+}
+.dash{
+    width: 100% !important;
 }
