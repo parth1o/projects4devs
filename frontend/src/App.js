@@ -8,6 +8,7 @@ import {
 import Login from './login'
 import Signup from './signup'
 import { Link } from "react-router-dom";
+import Dash from './dashboard'
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
             </Route>
             <Route exact path="/signup">
               <Signup/>
+            </Route>
+            <Route exact path="/dashboard">
+              <Dash/>
             </Route>
           </Switch>
 
