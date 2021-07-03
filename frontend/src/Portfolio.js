@@ -2,7 +2,7 @@ import './App.css';
 import Chip from '@material-ui/core/Chip';
 import Button from '@material-ui/core/Button';
 
-function ProfileDisplay({ data }) {
+function ProfileDisplay({ data={} }) {
     return (
         <div className="profileDetail">
             <h1 className="title">{data.name}</h1>
