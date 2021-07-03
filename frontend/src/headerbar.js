@@ -1,13 +1,23 @@
 import {Link, useHistory} from "react-router-dom";
-import React from "react";
-import {Button} from "@material-ui/core";
+import React, {useState} from "react";
 import "./headerbar.css";
 import useToken from './useToken';
+import Dialog from '@material-ui/core/Dialog';
+import CreateProject from './createproject';
 
 function Headerbar(){
     const history = useHistory();
     const {deleteToken} = useToken();
+    const [open, setOpen] = useState(false);
 
+    function openModal() {
+        setOpen(true)
+    }
+
+    function closeModal() {
+        setOpen(false)
+        window.location.reload();
+    }
     return (
         <nav className="navbar navbar navbar-default navbar-expand-sm">
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -19,7 +29,7 @@ function Headerbar(){
                         <Link className="nav-item nav-link" to='/dashboard'>Dashboard</Link>
                     </a>
                     <a>
-                        <Link className="nav-item nav-link" to='/dashboard'>Create Project</Link>
+                        <Link className="nav-item nav-link" to='/dashboard' onClick={openModal}>Create Project</Link>
                     </a>
                     <a>
                         <a className="nav-item nav-link" onClick={() => {
@@ -29,7 +39,10 @@ function Headerbar(){
                     </a>
                 </div>
             </div>
+            <Dialog open={open} onClose={closeModal}>
+                <CreateProject close={closeModal}/>
+            </Dialog>
         </nav>
-    )
+    );
 }
 export default Headerbar;
