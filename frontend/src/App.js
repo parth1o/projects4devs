@@ -29,7 +29,7 @@ function App() {
               <Link to='/login'>
                 <Button className="homebuttons" variant="contained">Login</Button>
               </Link>
-              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <Link to='/signup'>
                 <Button className="homebuttons" variant="contained">Sign Up</Button>
               </Link>

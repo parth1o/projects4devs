@@ -5,6 +5,7 @@ import {useRouteProtector} from "./useRouteProtector";
 import HeaderBar from "./headerbar";
 
 function ProfileDisplay({ dataInput = {} }) {
+    const [loading, setLoading] = useState(true);
     const [data, setData] = useState(dataInput);
     const {token} = useToken();
 
@@ -17,22 +18,35 @@ function ProfileDisplay({ dataInput = {} }) {
                     'Authorization': `Bearer ${token}`
                 }
             }).then(res => res.json())
-                .then(data => setData(data));
+                .then(data => {
+                    setData(data);
+                    setLoading(false);
+                });
+        } else {
+            setLoading(false);
         }
     }, []);
+
+    if (loading) {
+        return (
+            <div>
+                <HeaderBar/>
+            </div>
+        );
+    }
 
     return (
         <div>
             <HeaderBar/>
             <div className="profileDetail">
-                <h1 className="title">{`${data.firstName} ${data.lastName}`}</h1>
-
-                <div className="desc">
-                    <h4>About me!</h4>
-                    <p>{data.description}</p>
+                <p className="lol"><strong className="othfont">Name: </strong>{`${data.firstName} ${data.lastName}`}</p>
+                <p className="ghuu"><strong className="othfont">Your Email: </strong>{data.email}</p>
+                <div className="ghuu">
+                    <strong><p className="othfont">Your Experiences:</p></strong>
+                    <p className="ghu">{data.description}</p>
                 </div>
 
-                <p>{data.email}</p>
+                
             </div>
         </div>
     );

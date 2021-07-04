@@ -3,12 +3,14 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import Link from '@material-ui/core/Link';
+import './App.css';
+
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import useToken from './useToken';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -35,6 +37,7 @@ export default function CreateProject({ close }) {
     const [name, setName] = useState();
     const [description, setDescription] = useState();
     const [githubLink, setGithubLink] = useState();
+    const {token} = useToken();
 
     function changeName(e) {
         setName(e.target.value);
@@ -56,6 +59,7 @@ export default function CreateProject({ close }) {
         await fetch('/api/project', {
             method: 'POST',
             headers: {
+                'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
@@ -68,16 +72,19 @@ export default function CreateProject({ close }) {
     }
 
     return (
-        <Container component="main" maxWidth="xs">
+        <Container className="popup" component="main" maxWidth="xs">
             <CssBaseline />
             <div className={classes.paper}>
-                <Typography component="h1" variant="h5">
+                <p className="topp" component="h1" variant="h5">
                     Create a new project
-                </Typography>
+                </p>
                 <form className={classes.form} noValidate>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <TextField
+                            InputLabelProps={{
+                                style: { color: '#FFDBB5' },
+                              }}
                                 autoComplete="newproject"
                                 name="newproject"
                                 variant="outlined"
@@ -91,6 +98,9 @@ export default function CreateProject({ close }) {
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
+                            InputLabelProps={{
+                                style: { color: '#FFDBB5' },
+                              }}
                                 variant="outlined"
                                 required
                                 fullWidth
@@ -105,6 +115,9 @@ export default function CreateProject({ close }) {
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
+                            InputLabelProps={{
+                                style: { color: '#FFDBB5' },
+                              }}
                                 autoComplete="githublink"
                                 name="githublink"
                                 variant="outlined"
@@ -118,10 +131,11 @@ export default function CreateProject({ close }) {
                         </Grid>
                     </Grid>
                     <Button
+
                         fullWidth
                         variant="contained"
                         color="primary"
-                        className={classes.submit}
+                        className="homebuttons"
                         onClick={sendForm}
                     >
                         Submit

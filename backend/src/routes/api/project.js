@@ -4,6 +4,7 @@ import {
     retrieveProjectList,
     deleteAllProjects,
 } from '../../db/project-dao';
+import auth from '../../middleware/auth';
 
 const HTTP_CREATED = 201;
 const HTTP_NOT_FOUND = 404;
@@ -14,10 +15,12 @@ const HTTP_OK = 200;
 const router = express.Router();
 
 // API to create new project
-router.post('/', async (req, res) => {
-    console.log(req.body);
-    const newProject = await createProject(req.body);
-    console.log(newProject);
+router.post('/', auth, async (req, res) => {
+    await createProject({
+        ...req.body,
+        _id: undefined,
+        owner: req.body._id
+    });
     res.sendStatus(HTTP_CREATED);
 });
 

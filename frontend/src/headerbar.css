@@ -1,24 +1,47 @@
 .navbar a {
-    float: left;
-    color: black;
+    float: right;
+    color: #FFDBB5;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1.5vh 0;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1.25em;
+    margin-right: 1.5vw;
 }
 
 /* Change the color of links on hover */
 .navbar a:hover {
-    background-color: #ddd;
-    color: grey;
+    color: #FFD;
 }
 
 /* Add a color to the active/current link */
-.navbar a.active {
-    background-color: #04AA6D;
-    color: white;
+.navbar a:active {
+    color: #FFD;
 }
 
 .navbar {
-    height: 100px
+    height: 8.35vh;
+    width: 100vw;
+    background-color: #419D78;
+}
+
+.title3 {
+    font-size: 4.3em;
+    padding-top: 0.2vh;
+    padding-left: 2vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Share Tech Mono', monospace;
+    color:#E0A458;
+}
+.singl{
+    color: #2D3047;
+}
+
+  @media screen and (max-width: 960px) {
+    .title3 {
+        display: none;
+    }
+    .navbar a {
+        margin-right: 2.6vw;
+    }
 }

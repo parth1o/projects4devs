@@ -176,7 +176,6 @@ export default function SignUp() {
               />
             </Grid>
             <Grid item xs={12}>
-              <p className="skill"> Please select level of proficiency</p>
               <TextField
               InputLabelProps={{
                 style: { color: '#FFDBB5' },
@@ -213,7 +212,7 @@ export default function SignUp() {
                 fullWidth
                 multiline
                 id="description"
-                placeholder="Write about your software devlopment experiences in here"
+                placeholder="Write about your software development experiences in here"
                 label="Decription"
                 name="description"
                 autoComplete=""

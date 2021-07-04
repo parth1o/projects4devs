@@ -22,7 +22,7 @@ async function createProject(project) {
 
 // Returns list of projects
 async function retrieveProjectList() {
-    return await Project.find();
+    return await Project.find().populate('owner', 'firstName lastName email').exec();
 }
 
 // Returns list of projects

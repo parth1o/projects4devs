@@ -1,0 +1,23 @@
+#pp{
+    background-color: #526e63;
+}
+.title4{
+text-align: center;
+color:#FFDBB5;
+}
+.homebutt{
+    display: flex !important;
+    height:5vh;
+    width: 100vw;
+    font-size: 1.2em !important;
+    font-family: 'Ubuntu', sans-serif;
+    border-color: #FFDBB5 !important;
+    color: #FFDBB5 !important;
+    background-color:#419D78 !important;
+    position: bottom !important;
+  }
+  .pop{
+      text-align: center;
+      margin: 2vh !important;
+      color:#E0A458;
+  }
