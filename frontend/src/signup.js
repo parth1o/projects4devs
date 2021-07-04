@@ -70,6 +70,7 @@ export default function SignUp() {
         password,
         language,
         level,
+        skills,
         description
       })
     });

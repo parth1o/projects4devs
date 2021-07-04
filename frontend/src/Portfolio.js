@@ -43,6 +43,9 @@ function ProfileDisplay({ dataInput = {} }) {
                 <p className="ghuu"><strong className="othfont">Your Email: </strong>{data.email}</p>
                 <div className="ghuu">
                     <strong><p className="othfont">Your Experiences:</p></strong>
+                    <p className="ghu">{data.skills.map(skill => {
+              return <span className="skill" >{skill.language} - {skill.level}</span>
+              })}</p>
                     <p className="ghu">{data.description}</p>
                 </div>
 
@@ -53,3 +56,4 @@ function ProfileDisplay({ dataInput = {} }) {
 }
 
 export default ProfileDisplay;
+

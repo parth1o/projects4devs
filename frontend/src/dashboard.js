@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import "./dashboard.css";
+import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -13,9 +13,18 @@ import Dialog from '@material-ui/core/Dialog';
 import ProjectDisplay from './ProjectDetails';
 import HeaderBar from './headerbar';
 import {useRouteProtector} from './useRouteProtector';
-import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
+    icon: {
+        marginRight: theme.spacing(2),
+    },
+    heroContent: {
+        backgroundColor: theme.palette.background.paper,
+        padding: theme.spacing(8, 0, 6),
+    },
+    heroButtons: {
+        marginTop: theme.spacing(4),
+    },
     cardGrid: {
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
@@ -25,6 +34,9 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         position: 'center',
+    },
+    cardMedia: {
+        paddingTop: '30.25%', // 16:9
     },
     cardContent: {
         flexGrow: 1,
@@ -84,27 +96,28 @@ export default function Album() {
                                         <Card
                                             className={classes.card}
                                             variant="elevation"
-                                            id="pp"
                                         >
+                                            <CardMedia
+                                                className={classes.cardMedia}
+                                                title="Image title"
+                                            />
                                             <CardContent
                                                 className={classes.cardContent}
-                                                
                                             >
                                                 <Typography
-                                                    className="title4"
                                                     gutterBottom
                                                     variant="h5"
                                                     component="h2"
                                                 >
                                                     {card.name}
                                                 </Typography>
-                                                <Typography className="pop">
+                                                <Typography>
                                                     {card.description}
                                                 </Typography>
                                             </CardContent>
                                             <CardActions>
                                                 <Button
-                                                    className="homebutt"
+                                                    size="small"
                                                     color="primary"
                                                     onClick={() => {
                                                         setViewingItem(card);
