@@ -39,7 +39,7 @@ function ProfileDisplay({ dataInput = {} }) {
         <div>
             <HeaderBar/>
             <div className="profileDetail">
-                <p className="lol"><strong className="othfont">Name: </strong>{`${data.firstName} ${data.lastName}`}</p>
+                <p className="ghuu"><strong className="othfont">Name: </strong>{`${data.firstName} ${data.lastName}`}</p>
                 <p className="ghuu"><strong className="othfont">Your Email: </strong>{data.email}</p>
                 <div className="ghuu">
                     <strong><p className="othfont">Your Experiences:</p></strong>

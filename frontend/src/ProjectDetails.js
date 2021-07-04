@@ -25,7 +25,7 @@ import Button from '@material-ui/core/Button';
 function ProjectDisplay({ data }) {
     return (
         <div className="projectDetail">
-            <p className="top">{data.name}</p>
+            <p className="ghuuu">{data.name}</p>
             <p className="ghuu"><strong>Project Owner: </strong>{data.owner.firstName} {data.owner.lastName}</p>
             <p className="ghuu"><strong>Owner Email: </strong>{data.owner.email}</p>
             <p className="ghuu"><strong>Project Github link: </strong><a className="ghu" target="_blank" href={data.githubLink}>{data.githubLink}</a></p>

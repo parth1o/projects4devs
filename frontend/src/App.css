@@ -41,7 +41,7 @@
 }
 .top{
   margin-top: 0 !important;
-  font-size: 6em;
+  font-size: 5em;
   font-family: 'Share Tech Mono', monospace;
   color:#E0A458;
 }
@@ -51,9 +51,15 @@
   color:#FFDBB5 !important;
 }
 .ghuu{
-  font-size: 2em !important;
+  font-size: 1.8em !important;
   font-family: 'Ubuntu', sans-serif;
   color:#FFDBB5 !important;
+}
+.ghuuu{
+  margin-top: 0 !important;
+  font-size: 4em;
+  font-family: 'Share Tech Mono', monospace;
+  color:#E0A458;
 }
 .topp{
   font-size: 3em;
